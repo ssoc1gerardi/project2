@@ -1,0 +1,68 @@
+
+ /*
+    Author: Gerardi Vasiliki
+    
+    Περιγραφή:
+
+        Αρχείο μορφοποίησης css για την σελίδα υπολογισμού της διακρίνουσας και των ριζών μιας 2ας εξίσωσης
+ */
+ 
+*{
+    text-align: center;
+}
+/* Μορφοποίηση κάθε στήλης*/
+.column {
+    float: bottom;     /* Κάνε την κάθε στήλη να κολλά τη μία κάτω από την άλλη */
+    padding: 5px;     /* θέσε περιμετρικά ένα Padding 25px σε κάθε στήλη*/    
+}
+
+
+/* Μορφοποίηση των στοιχείων input */
+.input {
+    width: 100%;
+    margin: 10px;
+    border: 10 px solid purple;
+ }
+
+/* Μορφοποίηση του πλήκτρου*/
+button {
+    width: 100%;
+    overflow:visible;
+    cursor: pointer
+    
+}
+
+/* Μορφοποίηση του στοιχείου εμφάνισης του αποτελέσματος*/
+.result {
+    text-align: center;
+    
+}
+/* Μορφοποίηση των οδηγιών για τον υπολογισμό*/
+.rule {
+    border:2px solid purple;
+    padding: 5px;
+    margin: 10px;
+    font-size: large;
+    text-align: center;
+}
+
+/* Μορφοποίηση των headings που χρησιμοποιούνται στη σελίδα*/
+h1, h3 {
+    margin: 10px;
+    color:purple;
+    text-decoration-line:underline;
+    text-decoration-color:purple;
+    text-decoration-style:dotted;
+}
+/* Μορφοποίηση των παραγράφων*/
+p {
+    margin: 10px;   
+}
+
+/* Μορφοποίηση του εξωτερικού περιγράμματος που θα φιλοξενήσει όλο το περιεχόμενο*/
+.box {
+    width: 50%;
+    padding: 5px;
+    margin: 10px;
+    
+}

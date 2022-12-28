@@ -1,0 +1,80 @@
+<!--
+    Auhtor: Gerardi Vasiliki
+
+    Περιγραφή:
+        Υπολογισμός Διακρίνουσας
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsiveness-->
+        <script src ="diakrinousa.js"></script>
+        <link rel="stylesheet" type="text/css" href="styleDiakrinousa.css">
+    </head>
+
+    <body onload="onLoad()">
+    <div class="box">
+        <h1>Διακρίνουσα</h1>
+        <p class="rule"><b>Η γενική μορφή μιας δευτεροβάθμιας εξίσωσης είναι: </p>
+        <img src="exiswsi.bmp" ></b>
+        
+        <h3>Υπολογισμός της Διακρίνουσας</h3>
+        <p style="text-align: justify;">Μπορείτε να υπολογίσετε την διακρίνουσα και να βρείτε τις ρίζες της εξίσωσης γράφοντας τους αντίστοιχους συντελεστές στα κουτάκια παρακάτω. </p>
+        <div id ="input" class="input">
+
+            <div class = "row">
+                <div class="column"><p>Τιμή του α:  <input id="a"> </div>
+                <div class="column"><p>Τιμή του β: <input id="b"></div>
+                <div class="column"><p>Τιμή του γ: <input id="g"></div></div>
+            </div>
+            
+            <div class = "row">
+                <div class="column"> <p id="result" class="result"></p></div>
+                <div class="column"><button id="calcButton" onclick="oncalcButtonClick()">Υπολογισμός</button></div>    
+        </div>
+    </div>  
+    <!--
+        Πρόγραμμα υπολογισμού της διακρίνουσας για εύρεση των ριζών της εξίσωσης.
+    -->
+    <script>
+       
+       // δήλωσε μεταβλητές αναφοράς για κάθε πεδίο εισόδου
+       let inputa = document.getElementById("a");                      
+       let inputb = document.getElementById("b");
+       let inputg = document.getElementById("g");
+    
+       // δήλωσε μία μεταβλητή αναφοράς για το στοιχείο εμφάνισης αποτελέσματος 
+       let result = document.getElementById("result");
+
+        // συνάρτηση που εκτελείται όταν φορτώνουμε τη σελίδα
+       function onLoad() {
+
+        // κατά τη φόρτωση της σελίδας καθάρίζω όλα τα πεδία εισόδου
+        inputa.value = "";              
+        inputb.value = "";
+        inputg.value = "";
+       }
+       
+
+        function oncalcButtonClick() {   
+                // προτού προχωρήσω σε υπολογισμούς κάνω έλεγχο αν η εξίσωση είναι 2ου βαθμού
+                
+                if ((inputa.value!=0))
+                {
+                    // εμφανίζω αποτέλεσμα στο πεδίο result 
+                    result.innerHTML = Diakrinousa(inputa.value,inputb.value,inputg.value);
+                    
+                }
+                else // σε περίπτωση που το η μεταβλητη α είναι ίση με 0.
+                {
+                    // εμφανίζω ένα μήνυμα 
+                    result.innerHTML = "Η εξίσωση δεν είναι δευτεροβάθμια.";
+                }
+            }
+        
+
+    
+    </script>
+    </body>
+</html>
